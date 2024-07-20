@@ -142,11 +142,20 @@ border: none;
                 padding-right: 1%;
                 
                 }
+                body main #Carrusel div{
+                    margin-left: 3%;
+
+
+                }
+            body main #Carrusel div div{
+            margin-top: 12%;
             
+
+            }
                 body main #Carrusel div div img{
                     padding: 1%;
-            width: 7em;
-            height: 6.5em;
+            width: 5.5em;
+            height: 5em;
             
                 }
                 body main div .Botones{
@@ -165,7 +174,7 @@ border: none;
             height: 100%;
             text-align: center;
             display: flex;
-            margin: 1% 2%;
+            margin: 1% -5%;
             
 
         }
@@ -173,7 +182,7 @@ border: none;
         body main div .Botones div button{
         
         display: block;
-        
+        margin-right:5%;
          
         }
 
