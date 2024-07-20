@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generar PDF con PDF-Lib</title>
+</head>
+<body>
+  <button id="generatePDF">Generar PDF</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script>
+    document.getElementById('generatePDF').addEventListener('click', async () => {
+      const { PDFDocument, rgb } = PDFLib;
+
+      const pdfDoc = await PDFDocument.create();
+      const page = pdfDoc.addPage([600, 400]);
+
+      const { width, height } = page.getSize();
+      const fontSize = 30;
+      page.drawText('Hola, mundo!', {
+        x: 50,
+        y: height - 4 * fontSize,
+        size: fontSize,
+        color: rgb(0, 0.53, 0.71),
+      });
+
+      const pdfBytes = await pdfDoc.save();
+      const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'ejemplo.pdf';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    });
+  </script>
+</body>
+</html>

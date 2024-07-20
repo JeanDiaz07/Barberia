@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style/Administrador.css">
+</head>
+<body>
+    <header>
+        <img src="Imagenes/Logo.jpg" alt="">
+    </header>
+    <main>
+        <h2>Administrador</h2>
+        <h4>Lista de clientes </h4>
+        <div id="filtro">
+            <form action="">
+                <input type="text" id="searchBar" placeholder="Buscar...">
+            </form>
+
+            <button onclick="ordenarAscendente()">Fecha menor a mayor</button> 
+            <button onclick="ordenarDescendente()">Fecha mayor a menor</button>
+        </div>
+
+        <table id="TablaReservas" >
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Servicio</th>
+                    <th>Correo electrónico</th>
+                    <th>Teléfono</th>
+                    <th>Barbero</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tablaBody">
+                <!-- Contenido de la tabla -->
+            </tbody>
+        </table>
+        
+        <div id="paginationControls"></div>
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Editar Cliente</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="EditarForm">
+                            <label>Nombre</label><input type="text" id="Nombre" class="form-control"><br>
+                            <label>Apellido</label><input type="text" id="Apellido" class="form-control"><br>
+                            <label>Rut</label><input type="number" id="Rut" class="form-control"><br>
+                            <label>Correo electrónico</label><input type="email" id="email" class="form-control"><br>
+                            <label>Teléfono</label><input type="number" id="Telefono" class="form-control"><br>
+                            <label>Barbero</label><input type="text" id="barbero" class="form-control"><br>
+                            <label>Fecha</label><input type="date" id="fecha" class="form-control"><br>
+                            <label>Hora</label><input type="text" id="hora" class="form-control">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" onclick="guardarCambios()">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button onclick="exportarExcel()">Exportar a Excel</button>
+    </main>
+
+    <footer>
+        <img src="Imagenes/Logo.jpg" alt="">
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/excel.js"></script>
+    <script src="js/Editar.js"></script>
+    <script src="js/eliminar.js"></script>
+    <script src="js/Fecha.js"></script>
+    <script src="js/Listar.js"></script>
+    <script src="js/ordenarAC.js"></script>
+    <script src="js/ordenarDC.js"></script>
+    
+ 
+</body>
+</html>

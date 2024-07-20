@@ -1,0 +1,27 @@
+@keyframes cambiar-tamano {
+    0% {
+        width: 200px;
+        height: 200px;
+    }
+    25% {
+        width: 300px;
+        height: 300px;
+    }
+    50% {
+        width: 400px;
+        height: 400px;
+    }
+    75% {
+        width: 500px;
+        height: 500px;
+    }
+    100% {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+#imagen {
+    animation: cambiar-tamano 8s infinite;
+    transition: width 0.5s ease, height 0.5s ease;
+}

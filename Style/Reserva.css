@@ -1,0 +1,217 @@
+
+
+html, body{
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+
+}
+
+
+
+
+
+body main{
+width: 100%;
+height: 100%;
+padding: 5%;
+background-image: url(../Imagenes/animals-1851535_1280.jpg);
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+
+body main::before{
+    width: 100%;
+    height: 100%;
+    background-color: black;    
+    opacity: 0.6;
+    position: absolute;
+    content: "";
+    top: 69%;
+    left: 0;
+    }
+
+
+body main div{
+width: 100%;
+height: 100%;
+margin-bottom: 2%;
+display: flex;
+position: relative;
+}
+
+
+body main div .HorasDsiponibles{
+width: 50%;
+height: auto;
+display: block;
+
+}
+ 
+body main div .HorasDsiponibles h2{
+color: white;
+margin: 1%;
+text-align: center;
+}
+
+
+
+
+
+
+
+
+body main div .Formulario{
+width: 60%;
+height: 80%;
+color: white;
+
+}
+body main div .Formulario form{
+    width: 80% ;
+    height:auto ;
+    padding: 1%;
+    text-align: center;
+   
+    margin-left: 10%;
+    margin-right: 10%;
+
+
+
+
+
+
+
+
+}
+body main div .Formulario form input{
+background-color: transparent;
+border-top: 0;
+border-left: 0;
+border-right: 0;
+border-color: black;
+color: white;
+}
+body main div .Formulario form select{
+
+    background-color: transparent;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: black;
+    color: white;
+
+}
+body main form h3{
+
+margin: 5%;
+
+
+}
+body main form button{
+
+margin: 1%;
+border: none;
+background-color: darkgrey;
+
+
+
+}
+
+
+@media only screen and (max-width: 700px) {
+    body main{
+        width: 100%;
+        height: 100%;
+        padding: 2%;
+        background-image: url(../Imagenes/animals-1851535_1280.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        }
+        
+        body main::before{
+            width: 100%;
+            height: 100%;
+            background-color: black;    
+            opacity: 0.6;
+            position: absolute;
+            content: "";
+            top: 27%;
+            left: 0;
+            }
+                
+                
+                body main div{
+                width: 100%;
+                height: 100%;
+                display: block;
+                position: relative;
+                padding: 2%;
+                
+                }
+                
+                
+                body main div .HorasDsiponibles{
+                width: 100%;
+                height: 30%;
+                display: block;
+                
+                }
+                
+                
+                body main div .HorasDsiponibles h2{
+                color: white;
+                margin: 1%;
+                text-align: center;
+                }
+                body main div .HorasDsiponibles table{
+                width: 1rem;
+                height: 0.5rem;
+                
+                }
+                
+                body main div .HorasDsiponibles table td{
+                width: 0.5rem;
+                height: 0.5rem;
+                }
+                
+                
+                
+                
+                
+                body main div .Formulario{
+                width: 100%;
+                height: 50%;
+                color: white;
+                
+                }
+                body main div .Formulario form{
+                    width: 80% ;
+                    height:auto ;
+                    padding: 1%;
+                    text-align: center;
+                   
+                    margin-left: 10%;
+                    margin-right: 10%;
+                
+                
+                
+                
+                
+                
+                
+                
+                }
+
+
+}
+
+
+
+
+
+
+
+
+
