@@ -124,7 +124,7 @@ border: none;
         opacity: 0.4;
         position: absolute;
         content: "";
-        top: 28%;
+        top: auto;
         left: 0;
         }
         
