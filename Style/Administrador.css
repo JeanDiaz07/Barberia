@@ -100,14 +100,19 @@ body main table tr th{
             
             
             }
-
+    
         body main table {
         width: 80%;
         height: auto; 
         margin-left: 0%;
  
         }
-
+        body main .searchBar{
+        width: 200px;
+        height: auto;
+        margin-left: -20%;
+        margin-top: 5%;
+        }
         body main table tr{
         font-size: 10px;
 
