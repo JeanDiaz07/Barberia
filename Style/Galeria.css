@@ -63,3 +63,29 @@ p.desc {
 }
 p.desc:hover {
 }
+@media only screen and (max-width: 700px) {
+
+    .container{
+
+    display: flex;
+    top: 10%;
+
+    }
+    img {
+       width: 150px;
+       height: 150px;
+
+    }
+
+    .card{
+     width: 150px;
+     height: 150px ;
+
+
+    }
+    .card:hover {
+        width: 150px;
+        height: 150px;
+    }
+
+}
